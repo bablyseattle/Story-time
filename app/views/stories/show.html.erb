@@ -1,4 +1,25 @@
 <h1>  <%= @story.title %> </h1> <h4> <%= @story.description  %> </h4>
+
+<% if @story.contributions.any? %>
+<h4>Contributions:</h4>
+
+  <% @story.contributions.each do |contribution| %>
+  <img src="<%= contribution.image %>">
+  <h5>
+    Story by <%= contribution.username %>
+  </h5>
+  <h6> Story : <%= contribution.sentence %> </h6>
+  <hr>
+  <% end %>
+
+
+
+<% else %>
+  <p>There are no contributions yet!</p>
+<% end %>
+
+<p> <%= link_to "Contribute to this story" , new_story_contribution_path(@story)%> </p>
+
 <p> <%= link_to "Return to stories list", stories_path %></p>
 <p> <%= link_to "Edit", edit_story_path(@story) %> </p>
 <p> <%= link_to "Delete", story_path(@story),
