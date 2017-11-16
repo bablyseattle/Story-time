@@ -12,6 +12,8 @@ class ContributionsController < ApplicationController
     else render :new
     end
   end
+
+  
   private
   def contribution_params
     params.require(:contribution).permit(:username, :sentence)

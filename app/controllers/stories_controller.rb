@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+    @recent = @story.contributions.two_most_recent
     render :show
   end
 

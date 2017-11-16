@@ -14,9 +14,23 @@
 <br>
 
 
+
 <% else %>
   <p>There are no contributions yet!</p>
 <% end %>
+
+
+<h2> Recent contributions: </h2>
+
+<% @recent.each do |contribution| %>
+<img src="<%= contribution.image %>">
+<h3>
+  Story by <%= contribution.username %>
+</h5>
+<h4> Story : <%= contribution.sentence %> </h6>
+<hr>
+<% end %>
+
 
 <p> <%= link_to "Contribute to this story" , new_story_contribution_path(@story)%> </p>
 
