@@ -9,6 +9,10 @@
     Story by <%= contribution.username %>
   </h5>
   <h4> Story : <%= contribution.sentence %> </h6>
+    <button> <%= link_to "Edit", edit_story_contribution_path(@story, contribution) %> </button>
+    <button> <%= link_to "Delete", story_contribution_path(@story, contribution),
+    :data => {:confirm => "You sure?", :method => "Delete"} %> </button>
+    <br>
   <hr>
   <% end %>
 <br>
