@@ -1,17 +1,17 @@
 <h1>  <%= @story.title %> </h1> <h4> <%= @story.description  %> </h4>
 
 <% if @story.contributions.any? %>
-<h4>Contributions:</h4>
+<h3>Contributions:</h4>
 
   <% @story.contributions.each do |contribution| %>
   <img src="<%= contribution.image %>">
-  <h5>
+  <h3>
     Story by <%= contribution.username %>
   </h5>
-  <h6> Story : <%= contribution.sentence %> </h6>
+  <h4> Story : <%= contribution.sentence %> </h6>
   <hr>
   <% end %>
-
+<br>
 
 
 <% else %>

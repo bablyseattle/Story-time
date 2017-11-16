@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+
+
+* {
+  text-align: left;
+  font-family: 'Cormorant Garamond', serif;
+  color: white;
+}
+
+body {
+  background-image: url("/assets/image/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+ul {
+list-style: none;
+}
+
+img {
+  border-style: solid;
+}
+
+hr {
+  width: 56%;
+  float: left;
+}
+
+#index_title {
+  font-size: 45px;
+}
+
+#index_hr {
+  width: 69%;
+}
+
+#newstory {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+label {
+  font-size: 20px;
+}
+
+input {
+  background-color: gray;
+}

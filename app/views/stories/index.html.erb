@@ -1,3 +1,8 @@
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+
+<h1 id="index_title">Choose a story below to contribute a sentence or start your own!</h1>
+
+<hr id="index_hr"><br>
 <h1>Stories</h1>
 <ul>
   <% @stories.each do |story| %>
@@ -5,6 +10,4 @@
   <% end %>
 </ul>
 
-<hr>
-
-<%= link_to "New Story", new_story_path %>
+<div id="newstory"><%= link_to "New Story", new_story_path %></div>
